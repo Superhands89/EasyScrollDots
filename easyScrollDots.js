@@ -34,6 +34,7 @@
         };
     };
     
+    // scroll indicator controller
     let scrollIndi = document.querySelectorAll('.scroll-indicator');
     if (scrollIndi.length) {
         const scrollIndiTemplate = '<div class="scroll-indicator-controller"><span></span></div>';
