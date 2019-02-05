@@ -95,11 +95,12 @@ function scrollIndiClicked(indiId) {
     }, 700);
     const scrollPos = document.body.getBoundingClientRect().top;
 
-    setTimeout(function () {
+    // option to extend upward travel distance for sticky navs that only appear when scrolling upward
+   /* setTimeout(function () {
         if (document.body.getBoundingClientRect().top > scrollPos && window.matchMedia('(min-width: 768px)').matches) {
             $('html, body').animate({
                 scrollTop: $('#' + indiId).offset().top - 108
             }, 400);
         }
-    }, 400);
+    }, 400); */
 }
