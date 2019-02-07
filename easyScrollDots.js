@@ -1,8 +1,8 @@
 // custom scroll indicator
 ~function () {
     
-    // standard throttle function
-    function throttle(func, wait, options) {
+    // standard dotsThrottle function
+    function dotsThrottle(func, wait, options) {
         var context, args, result;
         var timeout = null;
         var previous = 0;
@@ -55,7 +55,7 @@
 
         const scrollIndiControllerDots = scrollIndiController.querySelectorAll('[data-indi-controller-id]');
 
-        var handleIndiScroll = throttle(function () {
+        var handleIndiScroll = dotsThrottle(function () {
             let indiScrollTopCollection = {};
 
             scrollIndiElems.forEach(function (e) {
