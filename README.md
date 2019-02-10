@@ -27,8 +27,20 @@
 
 ## Usage
 
+### Initialise
+
 <p>Add the following function call somewhere in your javaScript AFTER the easyScrollDots.min.js file has been loaded...</p>
 
 ```javascript
 easyScrollDots();
 ```
+
+### Add your anchor points
+
+<p>Add the folliwing HTML snippet at the start of each section of the page that should have a dot associated with it...</p>
+
+```html
+<div></div>
+```
+
+<p>This snippet is provided in easyScrollDots.html</p>
