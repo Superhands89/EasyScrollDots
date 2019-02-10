@@ -74,3 +74,6 @@ https://codepen.io/SuperHands/pen/omqWBB
 
 <p><em>The demo is using jQuery for full browser support, but jQuery is NOT required.</em></p>
 
+## License
+
+MIT - Free and unrestricted use.
