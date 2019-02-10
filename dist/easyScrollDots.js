@@ -39,7 +39,7 @@ function dotsThrottle(func, wait, options) {
         }
         return result;
     };
-};
+}
 
 // global fixed nav options
 let dotFixedNavPresent = false;
