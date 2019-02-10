@@ -65,3 +65,9 @@ easyScrollDots({
 });
 ```
 
+## Demo
+
+<p>Lorem ipsum</p>
+
+
+
