@@ -70,7 +70,7 @@ easyScrollDots({
 
 <p>See a working demo on Code Pen:</p>
 
-https://codepen.io/SuperHands/pen/omqWBB
+<a href="https://codepen.io/SuperHands/pen/omqWBB" target="_blank">https://codepen.io/SuperHands/pen/omqWBB</a>
 
 <p><em>The demo is using jQuery for full browser support, but jQuery is NOT required.</em></p>
 
