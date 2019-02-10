@@ -24,7 +24,7 @@
 <script type="text/javascript" src="easyScrollDots.min.js"></script>
 ```
 
-<p><em>Update paths to depending on where you add the js and css files within your project.</em></p>
+<p><em>Update paths depending on where you add the js and css files within your project.</em></p>
 
 ## Usage
 
