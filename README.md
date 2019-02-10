@@ -35,7 +35,7 @@
 easyScrollDots({
   'fixed-nav': false,
   'fixed-nav-id': '',
-  'fixed-nav-direction': ''
+  'fixed-nav-upward': false
 });
 ```
 
@@ -44,7 +44,24 @@ easyScrollDots({
 <p>Add the folliwing HTML snippet at the start of each section of the page that should have a dot associated with it...</p>
 
 ```html
-<div></div>
+<div>
+    <div class="scroll-indicator" id="section01" data-scroll-indicator-title="Hello World"></div>
+</div>
 ```
 
-<p>This snippet is provided in easyScrollDots.html</p>
+<p><strong>Replace the id with something unique each time you add the snippet</strong>, and also update the data-scroll-indictaor-title to represent the title for that section of the page.</p>
+
+<p><em>Remember, an id cannot have any spaces and cannot start with a number. Adding a unique id each time is required, and can be useful for creating deep link URLs to your content e.g. www.mysite.com/#section01</em></p>
+
+## Options
+
+<p>Some sites have a fixed or sticky top navigation bar which get in the way when easyScrollDots scrolls the browser window to the top of each section. Therefore you have to tell easyScrollDots if you have a fixed nav, and if so, you also need to provide the id of the navigation bar. Finally you can also tell easyScrollDots if your fixed nav only appears when the user is scrolling upward.</p>
+
+```javascript
+easyScrollDots({
+  'fixed-nav': true, // Set to true if you have a fixed nav.
+  'fixed-nav-id': 'myNav', // Set to the id of your navigation element (easyScrollDots will measure the height of the element).
+  'fixed-nav-upward': true // Set to true if your nav is only sticky when the user is scrolling up.
+});
+```
+
