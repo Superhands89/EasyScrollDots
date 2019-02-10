@@ -1,41 +1,42 @@
 // custom scroll indicator
-~function () {
-    
-    // standard dotsThrottle function
-    function dotsThrottle(func, wait, options) {
-        var context, args, result;
-        var timeout = null;
-        var previous = 0;
-        if (!options) options = {};
-        var later = function () {
-            previous = options.leading === false ? 0 : Date.now();
-            timeout = null;
+
+// standard dotsThrottle function
+function dotsThrottle(func, wait, options) {
+    var context, args, result;
+    var timeout = null;
+    var previous = 0;
+    if (!options) options = {};
+    var later = function () {
+        previous = options.leading === false ? 0 : Date.now();
+        timeout = null;
+        result = func.apply(context, args);
+        if (!timeout) context = args = null;
+    };
+    return function () {
+        var now = Date.now();
+        if (!previous && options.leading === false) previous = now;
+        var remaining = wait - (now - previous);
+        context = this;
+        args = arguments;
+        if (remaining <= 0 || remaining > wait) {
+            if (timeout) {
+                clearTimeout(timeout);
+                timeout = null;
+            }
+            previous = now;
             result = func.apply(context, args);
             if (!timeout) context = args = null;
-        };
-        return function () {
-            var now = Date.now();
-            if (!previous && options.leading === false) previous = now;
-            var remaining = wait - (now - previous);
-            context = this;
-            args = arguments;
-            if (remaining <= 0 || remaining > wait) {
-                if (timeout) {
-                    clearTimeout(timeout);
-                    timeout = null;
-                }
-                previous = now;
-                result = func.apply(context, args);
-                if (!timeout) context = args = null;
-            } else if (!timeout && options.trailing !== false) {
-                timeout = setTimeout(later, remaining);
-            }
-            return result;
-        };
+        } else if (!timeout && options.trailing !== false) {
+            timeout = setTimeout(later, remaining);
+        }
+        return result;
     };
-    
-    // scroll indicator controller
+};
+
+// scroll indicator controller
+function easyScrollDots(fixedNav, fixedId, fixedUp) {
     let scrollIndi = document.querySelectorAll('.scroll-indicator');
+    
     if (scrollIndi.length) {
         const scrollIndiTemplate = '<div class="scroll-indicator-controller"><span></span></div>';
         document.querySelector('body').lastElementChild.insertAdjacentHTML('afterend', scrollIndiTemplate);
@@ -69,9 +70,10 @@
             const indiOffsetValues = Object.keys(indiScrollTopCollection).map(function (itm) { return indiScrollTopCollection[itm]; });
             const indiOffsetMin = function () {
                 const indiRemoveMinuses = indiOffsetValues.filter(function (x) { return x > -1; });
+
                 return Math.min.apply(null, indiRemoveMinuses);
             }; 
-            
+
             Object.keys(indiScrollTopCollection).forEach(function (e) {
                // console.log("propertyName = " + e + " --- collectionEntry = " + indiScrollTopCollection[e] + " --- minOffset = " + indiOffsetMin());
                 if (indiScrollTopCollection[e] == indiOffsetMin()) {
@@ -88,8 +90,8 @@
 
         $(window).on('scroll', handleIndiScroll);
     }
-}();
-
+}
+    
 function scrollIndiClicked(indiId) {
     $('html, body').animate({
         scrollTop: $('#' + indiId).offset().top
