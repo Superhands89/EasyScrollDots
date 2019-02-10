@@ -28,4 +28,6 @@
 ## Usage
 
 <p>Add theh following function call somewhere in your javaScript once the easyScrollDots.min.js file has been loaded...</p>
-<p>easyScrollDots();</p>
+```js
+easyScrollDots();</p>
+```
