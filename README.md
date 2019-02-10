@@ -27,7 +27,8 @@
 
 ## Usage
 
-<p>Add theh following function call somewhere in your javaScript once the easyScrollDots.min.js file has been loaded...</p>
-```js
+<p>Add the following function call somewhere in your javaScript once the easyScrollDots.min.js file has been loaded...</p>
+
+```javascript
 easyScrollDots();</p>
 ```
