@@ -69,12 +69,10 @@ easyScrollDots({
 
 <p>Lorem ipsum</p>
 
-<p class="codepen" data-height="323" data-theme-id="0" data-default-tab="js,result" data-user="SuperHands" data-slug-hash="omqWBB" style="height: 323px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Easy Scroll Dots">
-  <span>See the Pen <a href="https://codepen.io/SuperHands/pen/omqWBB/">
-  Easy Scroll Dots</a> by paul dolby (<a href="https://codepen.io/SuperHands">@SuperHands</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<iframe height="323" style="width: 100%;" scrolling="no" title="Easy Scroll Dots" src="//codepen.io/SuperHands/embed/omqWBB/?height=323&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/SuperHands/pen/omqWBB/'>Easy Scroll Dots</a> by paul dolby
+  (<a href='https://codepen.io/SuperHands'>@SuperHands</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 
 
