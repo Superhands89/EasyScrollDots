@@ -7,6 +7,16 @@
 # Browser/OS Support
 
 <ul>
-  <li>Windows/Mac: Chrome &#10004; IE 10 & 11 &#10004; FF &#10004; Edge &#10004; Opera &#10004;</li>
-  <li>Android/IOS: Chrome &#10004; FF &#10004; Safari &#10004;</li>
+  <li><strong>Windows/Mac:</strong> Chrome &#10004; IE 10 & 11 &#10004; FF &#10004; Edge &#10004; Opera &#10004;</li>
+  <li><strong>Android/IOS:</strong> Chrome &#10004; FF &#10004; Safari &#10004;</li>
 </ul>
+
+# Installation
+
+## CDN
+
+<p>lorem ipsum</p>
+
+## Including Files
+
+<p>lorem dolor</p>
