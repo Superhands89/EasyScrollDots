@@ -1,1 +1,1 @@
-<p style="align: center;"># Easy Scroll Dots</p>
+<p style="text-align: center;"># Easy Scroll Dots</p>
