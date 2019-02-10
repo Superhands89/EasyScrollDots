@@ -1,4 +1,4 @@
-<h1 align="center">Easy Scroll Dots <strong color="#ff6347">:</strong></h1>
+<h1 align="center">Easy Scroll Dots :</h1>
 <p align="center"><strong>Quickly add anchor points throughout your web page/application and have navigational dots automatically appear in a fixed position on the side of the page. This allows the user to click to scroll though sections of the page, and it updates as they scroll.</strong></p>
 <p align="center"><em>Unlike some other plugins, Easy Scroll Dots does NOT require your web site or application to have a full page or full width slide design. Simply add your anchor points to any sections within your HTML and Easy Scroll Dots will do the rest.</em></p>
 <p align="center"><img src="http://i66.tinypic.com/ddyzhx.jpg" alt="Easy Scroll Dots Representation" /></p>
@@ -55,7 +55,7 @@ easyScrollDots({
 
 ## Options
 
-<p>Some sites have a fixed or sticky top navigation bar which get in the way when easyScrollDots scrolls the browser window to the top of each section. Therefore you have to tell easyScrollDots if you have a fixed nav, and if so, you also need to provide the id of the navigation bar. Finally you can also tell easyScrollDots if your fixed nav only appears when the user is scrolling upward.</p>
+<p>Some sites have a fixed or sticky top navigation bar which gets in the way when easyScrollDots scrolls the browser window to the top of each section. Therefore you have to tell easyScrollDots if you have a fixed nav, and if so, you also need to provide the id of the navigation bar. Finally you can also tell easyScrollDots if your fixed nav only appears when the user is scrolling upward.</p>
 
 ```javascript
 easyScrollDots({
