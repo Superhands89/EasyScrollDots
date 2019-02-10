@@ -51,7 +51,7 @@ easyScrollDots({
 
 <p><strong>Replace the id with something unique each time you add the snippet</strong>, and also update the data-scroll-indictaor-title to represent the title for that section of the page.</p>
 
-<p><em>Remember, an id cannot have any spaces and cannot start with a number. Adding a unique id each time is required, and can be useful for creating deep link URLs to your content e.g. www.mysite.com/#section01</em></p>
+<p><em>Remember, an id cannot have any spaces and cannot start with a number. Adding a unique id each time is required, and can be useful for creating deep link URLs to your content e.g. mysite.com/#section01</em></p>
 
 ## Options
 
