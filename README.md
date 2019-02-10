@@ -34,9 +34,9 @@
 
 ```javascript
 easyScrollDots({
-  'fixed-nav': false,
-  'fixed-nav-id': '',
-  'fixed-nav-upward': false
+  'fixedNav': false,
+  'fixedNavId': '',
+  'fixedNavUpward': false
 });
 ```
 
@@ -60,9 +60,9 @@ easyScrollDots({
 
 ```javascript
 easyScrollDots({
-  'fixed-nav': true, // Set to true if you have a fixed nav.
-  'fixed-nav-id': 'myNav', // Set to the id of your navigation element (easyScrollDots will measure the height of the element).
-  'fixed-nav-upward': true // Set to true if your nav is only sticky when the user is scrolling up.
+  'fixedNav': true, // Set to true if you have a fixed nav.
+  'fixedNavId': 'myNav', // Set to the id of your navigation element (easyScrollDots will measure the height of the element).
+  'fixedNavUpward': true // Set to true if your nav is only sticky when the user is scrolling up.
 });
 ```
 
