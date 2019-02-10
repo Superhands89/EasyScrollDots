@@ -13,10 +13,13 @@
 
 # Installation
 
-## CDN
+## Including Files
+### CSS
+<link rel="stylesheet" type="text/css" href="easyScrollDots.min.css" />
+### JS
+<script type="text/javascript" src="easyScrollDots.min.js"></script>
+<p>Update paths to depending on where you add the js and css files within your project</p>
+
+## Usage
 
 <p>lorem ipsum</p>
-
-## Including Files
-
-<p>lorem dolor</p>
