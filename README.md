@@ -15,15 +15,15 @@
 
 ## Including Files
 
-### CSS
-
+```html
+<!-- CSS for Easy Scroll Dots -->
 <link rel="stylesheet" type="text/css" href="easyScrollDots.min.css" />
 
-### JS
-
+<!-- Js for Easy Scroll Dots -->
 <script type="text/javascript" src="easyScrollDots.min.js"></script>
+```
 
-<p>Update paths to depending on where you add the js and css files within your project</p>
+<p><em>Update paths to depending on where you add the js and css files within your project.</em></p>
 
 ## Usage
 
