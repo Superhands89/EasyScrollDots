@@ -32,7 +32,11 @@
 <p>Add the following function call somewhere in your javaScript AFTER the easyScrollDots.min.js file has been loaded...</p>
 
 ```javascript
-easyScrollDots();
+easyScrollDots({
+  'fixed-nav': false,
+  'fixed-nav-id': '',
+  'fixed-nav-direction': ''
+});
 ```
 
 ### Add your anchor points
