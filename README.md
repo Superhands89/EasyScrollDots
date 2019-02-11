@@ -65,7 +65,11 @@ easyScrollDots({
 });
 ```
 
-## Demo
+## Assumtions & Prerequisites
+
+It is assumed that your web application has a <body> tag. easyScrollDots appends itself to the end of the body.
+
+# Demo
 
 <p>See a working demo on CodePen:</p>
 
