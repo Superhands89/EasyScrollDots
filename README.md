@@ -23,7 +23,7 @@
 <script type="text/javascript" src="easyScrollDots.min.js"></script>
 ```
 
-<p><em>Update paths depending on where you add the JS and CSS files within your project.</em></p>
+<p><em>Add the CSS file within your head tag, and add the JS file before the closing body tag. Update the paths depending on where you add the files within your project.</em></p>
 
 ## Usage
 
