@@ -82,7 +82,7 @@ function easyScrollDots(dotfixedOptions) {
                 indiScrollTopCollection[scrollIndiIdScroll] = indiScrollTop;
             });
 
-            // const indiOffsetValues = Object.values(indiScrollTopCollection); not supported in ie
+            // const indiOffsetValues = Object.values(indiScrollTopCollection); not supported in IE
             const indiOffsetValues = Object.keys(indiScrollTopCollection).map(function (itm) { return indiScrollTopCollection[itm]; });
             const indiOffsetMin = function () {
                 const indiRemoveMinuses = indiOffsetValues.filter(function (x) { return x > -1; });
