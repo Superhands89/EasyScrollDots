@@ -67,7 +67,7 @@ easyScrollDots({
 
 ## Assumptions & Prerequisites
 
-It is assumed that your application has a body tag. easyScrollDots appends itself to the end of the body.
+It is assumed that your application has a body tag. (easyScrollDots appends itself to the end of the body)
 
 # Demo
 
