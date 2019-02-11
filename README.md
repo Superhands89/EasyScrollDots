@@ -20,11 +20,11 @@
 <!-- CSS for Easy Scroll Dots -->
 <link rel="stylesheet" type="text/css" href="easyScrollDots.min.css" />
 
-<!-- Js for Easy Scroll Dots -->
+<!-- JS for Easy Scroll Dots -->
 <script type="text/javascript" src="easyScrollDots.min.js"></script>
 ```
 
-<p><em>Update paths depending on where you add the js and css files within your project.</em></p>
+<p><em>Update paths depending on where you add the JS and CSS files within your project.</em></p>
 
 ## Usage
 
@@ -68,7 +68,7 @@ easyScrollDots({
 
 ## Demo
 
-<p>See a working demo on Code Pen:</p>
+<p>See a working demo on CodePen:</p>
 
 https://codepen.io/SuperHands/pen/omqWBB
 
