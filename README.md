@@ -73,7 +73,7 @@ It is assumed that your application has a body tag. (easyScrollDots appends itse
 
 <p>See a working demo on CodePen:</p>
 
-https://codepen.io/SuperHands/pen/omqWBB
+<strong>https://codepen.io/SuperHands/pen/omqWBB</strong>
 
 <p><em>The demo is using jQuery for full browser support, but jQuery is NOT required.</em></p>
 
