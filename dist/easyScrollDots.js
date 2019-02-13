@@ -39,7 +39,7 @@ function dotsThrottle(func, wait, options) {
         }
         return result;
     };
-}
+};
 
 // global fixed nav options
 let dotFixedNavPresent = false;
@@ -108,7 +108,7 @@ function easyScrollDots(dotfixedOptions) {
           handleIndiScroll();
       };
     }
-}
+};
     
 function scrollIndiClicked(indiId) {
     if (window.jQuery) {
@@ -192,4 +192,4 @@ function scrollIndiClicked(indiId) {
             });
         }
     }
-}
+};
