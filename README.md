@@ -6,7 +6,7 @@
 # Browser/OS Support
 
 <ul>
-  <li><strong>Windows/Mac:</strong> Chrome &#10004; IE 10 & 11 &#10004; FF &#10004; Edge &#10004; Opera &#10004;</li>
+  <li><strong>Windows/Mac:</strong> Chrome &#10004; IE 11 &#10004; FF &#10004; Edge &#10004; Opera &#10004;</li>
   <li><strong>Android/IOS:</strong> Chrome &#10004; FF &#10004; Safari &#10004;</li>
 </ul>
 <p><em>Note: Easy Scroll Dots is vanilla and has no dependencies in order to work on Chrome and Firefox. However, jQuery is recommended if you need consistant and smooth animations across all of the supported browsers.</em></p> 
