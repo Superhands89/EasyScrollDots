@@ -13,6 +13,10 @@
     transform: translate(0, -50%);
     right: 20px;
     z-index: 2;
+    
+    &.indi-mobile > div span {
+      display: none;
+    }
 
     @media (max-width: 1024px) {
         right: 10px;
@@ -45,6 +49,10 @@
             transform: translateX(10px);
             transition: all 0.4s ease;
             will-change: transition;
+            
+            @media (hover: none) {
+                display: none;
+            }
 
             &:after {
                 content: "-----";
@@ -55,7 +63,7 @@
             }
         }
 
-        @media (min-width: 1025px) {
+        @media (hover: hover), (-ms-high-contrast: none), (-ms-high-contrast: active) {
             &:hover {
 
                 span {
