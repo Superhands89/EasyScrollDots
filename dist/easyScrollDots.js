@@ -57,6 +57,7 @@ function easyScrollDots(dotfixedOptions) {
         const scrollIndiTemplate = '<div class="scroll-indicator-controller"><span></span></div>';
         document.querySelector('body').lastElementChild.insertAdjacentHTML('afterend', scrollIndiTemplate);
         const scrollIndiController = document.querySelector('.scroll-indicator-controller');
+        if ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) { scrollIndiController.classList.add('indi-mobile'); }
         const scrollIndiElems = Array.prototype.slice.call(scrollIndi);
 
         scrollIndiElems.forEach(function (e, i) {
