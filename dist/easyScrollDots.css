@@ -1,4 +1,4 @@
-/* Easy Scroll Dots 1.0.7 --- https://github.com/Superhands89/EasyScrollDots
+/* Easy Scroll Dots 1.0.8 --- https://github.com/Superhands89/EasyScrollDots
 * Quickly add anchor points throughout your web page/application and have navigational dots automatically appear
 * in a fixed position on the side of the page. This allows the user to click to scroll though sections of the page,
 * and it updates as they scroll.
@@ -13,6 +13,9 @@
   transform: translate(0, -50%);
   right: 20px;
   z-index: 2;
+}
+.scroll-indicator-controller.indi-mobile > div span {
+  display: none;
 }
 @media (max-width: 1024px) {
   .scroll-indicator-controller {
@@ -47,6 +50,11 @@
   transition: all 0.4s ease;
   will-change: transition;
 }
+@media (hover: none) {
+  .scroll-indicator-controller > div span {
+    display: none;
+  }
+}
 .scroll-indicator-controller > div span:after {
   content: "-----";
   padding-left: 5px;
@@ -54,7 +62,7 @@
   font-family: arial, sans-serif;
   vertical-align: text-top;
 }
-@media (min-width: 1025px) {
+@media (hover: hover), (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .scroll-indicator-controller > div:hover span {
     width: auto;
     opacity: 1;
