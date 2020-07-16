@@ -79,16 +79,16 @@ It is assumed that your application has a body tag. (easyScrollDots appends itse
 
 # Commercial License
 
-<p>To use easyScrollDots on commercial projects, a commercial licence is required...</p>
+<p>To use easyScrollDots on commercial projects, a commercial license is required...</p>
 
 ## Single Commercial License
 
-<p>This licence grants you to use easyScrollDots for one project, for yourself or for one client, and for commercial use. Purchase a one-off single commercial licence <a href="#">here</a>. ($8 exc. VAT)</p>
+<p>This license grants you to use easyScrollDots for one project, for yourself or for one client, and for commercial use. Purchase a one-off single commercial license <a href="#">here</a>. ($8 exc. VAT)</p>
 
 ## Extended Commercial License
 
-<p>This licence grants you to use easyScrollDots for an unlimited amount of projects for commercial use. Purchase a one-off extended commercial licence <a href="#">here</a>. ($23 exc. VAT)</p>
+<p>This license grants you to use easyScrollDots for an unlimited amount of projects for commercial use. Purchase a one-off extended commercial license <a href="#">here</a>. ($23 exc. VAT)</p>
 
 # Open Source License
 
-<p>If your application is open source and under a GNU GPL v3 compatible license, then you can use easyScrollDots without a commercial licence.</p>
+<p>If your application is open source and under a GNU GPL v3 compatible license, then you can use easyScrollDots without a commercial license.</p>
