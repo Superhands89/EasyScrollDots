@@ -77,18 +77,18 @@ It is assumed that your application has a body tag. (easyScrollDots appends itse
 
 <p><em>The demo is using jQuery for full browser support, but jQuery is NOT required.</em></p>
 
-## Commercial License
+# Commercial License
 
 <p>To use easyScrollDots on commercial projects, a commercial licence is required...</p>
 
-# Single Commercial License
+## Single Commercial License
 
 <p>This licence grants you to use easyScrollDots for one project, for yourself or for one client, and for commercial use. Purchase a one-off single commercial licence <a href="#">here</a>. ($8 exc. VAT)</p>
 
-# Extended Commercial License
+## Extended Commercial License
 
 <p>This licence grants you to use easyScrollDots for an unlimited amount of projects for commercial use. Purchase a one-off extended commercial licence <a href="#">here</a>. ($23 exc. VAT)</p>
 
-## Open Source License
+# Open Source License
 
 <p>If your application is open source and under a license compatible with the GNU GPL license v3, then you can use easyScrollDots without a commercial licence.</p>
