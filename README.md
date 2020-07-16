@@ -9,7 +9,7 @@
   <li><strong>Windows/Mac:</strong> Chrome &#10004; IE 11 &#10004; FF &#10004; Edge &#10004; Opera &#10004;</li>
   <li><strong>Android/IOS:</strong> Chrome &#10004; FF &#10004; Safari &#10004;</li>
 </ul>
-<p><em>Note: Easy Scroll Dots is vanilla and has no dependencies in order to work on Chrome and Firefox. However, jQuery is recommended if you need consistant and smooth animations across all of the supported browsers.</em></p> 
+<p><em>Note: Easy Scroll Dots is vanilla and has no dependencies in order to work on latest Edge, Chrome, Firefox and Safari. However, jQuery is recommended if you need consistant and smooth animations on Old Edge.</em></p> 
 
 # Installation
 
@@ -75,7 +75,7 @@ It is assumed that your application has a body tag. (easyScrollDots appends itse
 
 <strong>https://codepen.io/SuperHands/pen/omqWBB</strong>
 
-<p><em>The demo is using jQuery for full browser support, but jQuery is NOT required.</em></p>
+<p><em>The demo is using jQuery for Old Edge support, but jQuery is NOT required.</em></p>
 
 # Commercial License
 
