@@ -91,4 +91,4 @@ It is assumed that your application has a body tag. (easyScrollDots appends itse
 
 # Open Source License
 
-<p>If your application is open source and under a license compatible with the GNU GPL license v3, then you can use easyScrollDots without a commercial licence.</p>
+<p>If your application is open source and under a GNU GPL v3 compatible license, then you can use easyScrollDots without a commercial licence.</p>
