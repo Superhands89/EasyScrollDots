@@ -74,7 +74,7 @@ It is assumed that your application has a body tag. (easyScrollDots appends itse
 
 <p>See a working demo on CodePen:</p>
 
-<strong>https://codepen.io/SuperHands/pen/omqWBB</strong>
+<strong><a href="https://codepen.io/SuperHands/pen/omqWBB" target="_blank">DEMO</a></strong>
 
 <p><em>The demo is using jQuery for Old Edge support, but jQuery is NOT required.</em></p>
 
@@ -84,11 +84,11 @@ It is assumed that your application has a body tag. (easyScrollDots appends itse
 
 ## Single Commercial License
 
-<p>This license grants you to use easyScrollDots for one project, for yourself or for one client, and for commercial use. Purchase a one-off single commercial license <a href="https://gum.co/TdtEX">here</a>. ($12 exc. VAT)</p>
+<p>This license grants you to use easyScrollDots for one project, for yourself or for one client, and for commercial use. Purchase a one-off single commercial license <a href="https://gum.co/TdtEX" target="_blank">here</a>. ($12 exc. VAT)</p>
 
 ## Extended Commercial License
 
-<p>This license grants you to use easyScrollDots for an unlimited amount of projects for commercial use. Purchase a one-off extended commercial license <a href="https://gum.co/NGfmlw">here</a>. ($25 exc. VAT)</p>
+<p>This license grants you to use easyScrollDots for an unlimited amount of projects for commercial use. Purchase a one-off extended commercial license <a href="https://gum.co/NGfmlw" target="_blank">here</a>. ($25 exc. VAT)</p>
 
 # Open Source License
 
