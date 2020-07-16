@@ -1,11 +1,13 @@
-/* Easy Scroll Dots 1.1.0 --- https://github.com/Superhands89/EasyScrollDots
+/* Easy Scroll Dots 1.1.2 --- https://github.com/Superhands89/EasyScrollDots
 * Quickly add anchor points throughout your web page/application and have navigational dots automatically appear
 * in a fixed position on the side of the page. This allows the user to click to scroll though sections of the page,
 * and it updates as they scroll.
 *
-* By Paul Dolby (Superhands89) 2019 --- https://github.com/Superhands89/
+* By Superhands89 2019 --- https://github.com/Superhands89/
 *
-* MIT Licence - Free and unrestricted use.
+* GPLv3 Licence for open source use only
+* or purchase a Single Commercial License at https://gum.co/TdtEX
+* or purchase an Extended Commercial License at https://gum.co/NGfmlw
 */
 
 // a throttle function
