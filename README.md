@@ -87,7 +87,7 @@ It is assumed that your application has a body tag. (easyScrollDots appends itse
 
 ## Extended Commercial License
 
-<p>This license grants you to use easyScrollDots for an unlimited amount of projects for commercial use. Purchase a one-off extended commercial license <a href="https://gum.co/TdtEX">here</a>. ($25 exc. VAT)</p>
+<p>This license grants you to use easyScrollDots for an unlimited amount of projects for commercial use. Purchase a one-off extended commercial license <a href="https://gum.co/NGfmlw">here</a>. ($25 exc. VAT)</p>
 
 # Open Source License
 
