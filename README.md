@@ -72,7 +72,7 @@ It is assumed that your application has a body tag. (easyScrollDots appends itse
 
 # Demo
 
-<p>See a working demo on CodePen:</p>
+<p>See a working demo:</p>
 
 <strong><a href="https://easyscrolldots.primmis.com/" target="_blank">DEMO</a></strong>
 
