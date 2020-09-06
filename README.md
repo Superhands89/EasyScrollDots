@@ -74,7 +74,7 @@ It is assumed that your application has a body tag. (easyScrollDots appends itse
 
 <p>See a working demo on CodePen:</p>
 
-<strong><a href="https://codepen.io/SuperHands/pen/omqWBB" target="_blank">DEMO</a></strong>
+<strong><a href="https://easyscrolldots.primmis.com/" target="_blank">DEMO</a></strong>
 
 <p><em>The demo is using jQuery for Old Edge support, but jQuery is NOT required.</em></p>
 
