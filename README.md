@@ -26,7 +26,7 @@
 <script type="text/javascript" src="easyScrollDots.min.js"></script>
 ```
 
-<p>Add the CSS file within your head tag, and add the JS file before the closing body tag. Update the paths depending on where you add the files within your project.</p>
+<p>Reference the CSS file within your head tag, and reference the JS file before the closing body tag. Update the paths depending on where you add the files within your project.</p>
 
 ## Usage
 
