@@ -14,7 +14,7 @@
   top: 50%;
   transform: translate(0, -50%);
   right: 20px;
-  z-index: 2;
+  z-index: 999;
 }
 .scroll-indicator-controller.indi-mobile > div span {
   display: none;
