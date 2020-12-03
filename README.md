@@ -16,6 +16,8 @@
 
 ## Including Files
 
+<p>Download the lastest release and find the files in the dist folder.</p>
+
 ```html
 <!-- CSS for Easy Scroll Dots -->
 <link rel="stylesheet" type="text/css" href="easyScrollDots.min.css" />
