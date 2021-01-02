@@ -86,11 +86,11 @@ It is assumed that your application has a body tag. (easyScrollDots appends itse
 
 ## Single Commercial License
 
-<p>This license grants you to use easyScrollDots for one project, for yourself or for one client, and for commercial use. Purchase a one-off single commercial license <a href="https://gum.co/TdtEX" target="_blank">here</a>. ($12 exc. VAT)</p>
+<p>This license grants you to use easyScrollDots for one project, for yourself or for one client, and for commercial use. Purchase a one-off single commercial license <a href="https://gum.co/TdtEX" target="_blank">here</a>. ($25 exc. VAT)</p>
 
 ## Extended Commercial License
 
-<p>This license grants you to use easyScrollDots for an unlimited amount of projects for commercial use. Purchase a one-off extended commercial license <a href="https://gum.co/NGfmlw" target="_blank">here</a>. ($25 exc. VAT)</p>
+<p>This license grants you to use easyScrollDots for an unlimited amount of projects for commercial use. Purchase a one-off extended commercial license <a href="https://gum.co/NGfmlw" target="_blank">here</a>. ($79 exc. VAT)</p>
 
 # Open Source License
 
