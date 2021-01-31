@@ -38,7 +38,8 @@
 easyScrollDots({
   'fixedNav': false,
   'fixedNavId': '',
-  'fixedNavUpward': false
+  'fixedNavUpward': false,
+  'offset': 0
 });
 ```
 
@@ -52,19 +53,20 @@ easyScrollDots({
 </div>
 ```
 
-<p><strong>Replace the id with something unique each time you add the snippet</strong>, and also update the data-scroll-indictaor-title to represent the title for that section of the page.</p>
+<p><strong>Replace the id with something different each time you add the snippet</strong>, and also update the data-scroll-indicator-title to represent the title for that section of the page.</p>
 
 <p><em>Remember, an id cannot have any spaces and cannot start with a number. Adding a unique id each time is required, and can be useful for creating deep link URLs to your content e.g. mysite.com/#section01</em></p>
 
 ## Options
 
-<p>Some sites have a fixed or sticky top navigation bar which gets in the way when easyScrollDots scrolls the browser window to the top of each section. Therefore you have to tell easyScrollDots if you have a fixed nav, and if so, you also need to provide the id of the navigation bar. Finally you can also tell easyScrollDots if your fixed nav only appears when the user is scrolling upward.</p>
+<p>Some sites have a fixed or sticky top navigation bar which gets in the way when easyScrollDots scrolls the browser window to the top of each section. Therefore you have to tell easyScrollDots if you have a **fixed nav**, and if so, you also need to provide the **id of the navigation bar**. You can also tell easyScrollDots if your fixed **nav only appears when the user is scrolling upward**. Finally, you can set an **offset amount** in order to adjust where the browser scrolls to when a dot is clicked.</p>
 
 ```javascript
 easyScrollDots({
   'fixedNav': true, // Set to true if you have a fixed nav.
-  'fixedNavId': 'myNav', // Set to the id of your navigation element (easyScrollDots will measure the height of the element).
-  'fixedNavUpward': true // Set to true if your nav is only sticky when the user is scrolling up.
+  'fixedNavId': 'myNav', // Set to the id of your navigation element if 'fixedNav' is true (easyScrollDots will measure the height of the element).
+  'fixedNavUpward': true, // Set to true if your nav is only sticky when the user is scrolling up (requires 'fixedNav' to be true and 'fixedNavId' to be a value).
+  'offset': 30 // Set to the amount of pixels you wish to offset the scroll amount by.
 });
 ```
 
