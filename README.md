@@ -59,7 +59,7 @@ easyScrollDots({
 
 ## Options
 
-<p>Some sites have a fixed or sticky top navigation bar which gets in the way when easyScrollDots scrolls the browser window to the top of each section. Therefore you have to tell easyScrollDots if you have a **fixed nav**, and if so, you also need to provide the **id of the navigation bar**. You can also tell easyScrollDots if your fixed **nav only appears when the user is scrolling upward**. Finally, you can set an **offset amount** in order to adjust where the browser scrolls to when a dot is clicked.</p>
+<p>Some sites have a fixed or sticky top navigation bar which gets in the way when easyScrollDots scrolls the browser window to the top of each section. Therefore you have to tell easyScrollDots if you have a __fixed nav__, and if so, you also need to provide the **id of the navigation bar**. You can also tell easyScrollDots if your fixed **nav only appears when the user is scrolling upward**. Finally, you can set an **offset amount** in order to adjust where the browser scrolls to when a dot is clicked.</p>
 
 ```javascript
 easyScrollDots({
