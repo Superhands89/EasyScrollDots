@@ -1,9 +1,9 @@
-/* Easy Scroll Dots 1.1.4 --- https://github.com/Superhands89/EasyScrollDots
+/* Easy Scroll Dots 1.1.5 --- https://github.com/Superhands89/EasyScrollDots
 * Quickly add anchor points throughout your web page/application and have navigational dots automatically appear
 * in a fixed position on the side of the page. This allows the user to click to scroll though sections of the page,
 * and it updates as they scroll.
 *
-* By Superhands89 2019/2021 --- https://github.com/Superhands89/
+* By Superhands89 2019-2021 --- https://github.com/Superhands89/
 *
 * GPLv3 Licence for open source use only
 * or purchase a Single Commercial License at https://gum.co/TdtEX
@@ -13,15 +13,15 @@
   position: fixed;
   top: 50vh;
   transform: translate(0, -50%);
-  right: 20px;
+  right: 10px;
   z-index: 999;
 }
 .scroll-indicator-controller.indi-mobile > div span {
   display: none;
 }
-@media (max-width: 1024px) {
+@media (min-width: 1025px) {
   .scroll-indicator-controller {
-    right: 10px;
+    right: 20px;
   }
 }
 .scroll-indicator-controller > div {
@@ -41,14 +41,14 @@
   position: absolute;
   right: calc(100% + 8px);
   white-space: nowrap;
-  top: -1px;
+  top: 50%;
   font-family: arial, sans-serif;
   font-size: 16px;
   line-height: 17px;
   width: 0;
   overflow: hidden;
   opacity: 0;
-  transform: translateX(10px);
+  transform: translateY(-50%) translateX(10px);
   transition: all 0.4s ease;
   will-change: transition;
 }
@@ -63,13 +63,14 @@
   letter-spacing: -2px;
   font-family: arial, sans-serif;
   vertical-align: text-top;
+  line-height: 14px;
 }
 @media (hover: hover), (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .scroll-indicator-controller > div:hover span {
     width: auto;
     opacity: 1;
     overflow: visible;
-    transform: translateX(0px);
+    transform: translateY(-50%) translateX(0px);
   }
 }
 .scroll-indicator-controller > div.active {
