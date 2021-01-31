@@ -106,9 +106,7 @@ function easyScrollDots(dotfixedOptions) {
 
         }, 300);
 
-      window.onscroll = function() {
-          handleIndiScroll();
-      };
+      window.addEventListener('scroll', handleIndiScroll);
     }
 };
     
