@@ -41,10 +41,12 @@ data-scroll-indicator-title="Hello World"
 <p>e.g.</p>
 
 ```html
-<div data-scroll-indicator-title="Hello World">Content in my section lorem ipsum dolor...</div>
+<div data-scroll-indicator-title="Hello World">
+  Content in my section lorem ipsum dolor...
+</div>
 ```
 
-<p><strong>Update the data-scroll-indicator-title value to represent the title for that section of the page.</p>
+<p><strong>Update "Hello World" to represent the title for that section of the page.</p>
 
 ### Initialise
 
