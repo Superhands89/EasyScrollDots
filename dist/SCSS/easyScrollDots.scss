@@ -1,0 +1,92 @@
+/* Easy Scroll Dots 2.0.0 --- https://github.com/Superhands89/EasyScrollDots
+* Quickly add anchor points throughout your web page/application and have navigational dots automatically appear
+* in a fixed position on the side of the page. This allows the user to click to scroll though sections of the page,
+* and it updates as they scroll.
+*
+* By Superhands89 2019-2022 --- https://github.com/Superhands89/
+*
+* GPLv3 Licence for open source use only
+* or purchase a Single Commercial License at https://gum.co/TdtEX
+* or purchase an Extended Commercial License at https://gum.co/NGfmlw
+*/
+.scroll-indicator-controller {
+    position: fixed;
+    top: 50vh;
+    transform: translate(0, -50%);
+    right: 10px;
+    z-index: 999;
+    
+    &.indi-mobile > div span {
+      display: none;
+    }
+
+    @media (min-width: 1025px) {
+        right: 20px;
+    }
+
+    > div {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        border-radius: 50%;
+        border: 1px solid tomato;
+        background: rgba(0, 0, 0, 0.25);
+        margin: 0 0 10px 0;
+        cursor: pointer;
+        transition: background 0.4s ease;
+        will-change: transition;
+
+        span {
+            color: tomato;
+            position: absolute;
+            right: ~"calc(100% + 8px)";
+            white-space: nowrap;
+            top: 50%;
+            font-family: arial, sans-serif;
+            font-size: 16px;
+            line-height: 17px;
+            width: 0;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(-50%) translateX(10px);
+            transition: all 0.4s ease;
+            will-change: transition;
+            
+            @media (hover: none) {
+                display: none;
+            }
+
+            &:after {
+                content: "-----";
+                padding-left: 5px;
+                letter-spacing: -2px;
+                font-family: arial, sans-serif;
+                vertical-align: text-top;
+                line-height: 14px;
+            }
+        }
+
+        @media (hover: hover), (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            &:hover {
+
+                span {
+                    width: auto;
+                    opacity: 1;
+                    overflow: visible;
+                    transform: translateY(-50%) translateX(0px);
+                }
+            }
+        }
+
+        &.active {
+            background: tomato;
+            border-color: rgba(0, 0, 0, 0.25);
+        }
+    }
+}
+// old edge version 18 and below
+@supports (-ms-ime-align:auto) {
+    .scroll-indicator-controller > div span {
+        transition: opacity 0.4s ease;
+    }
+}
