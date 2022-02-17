@@ -1,9 +1,9 @@
-/* Easy Scroll Dots 1.1.5 --- https://github.com/Superhands89/EasyScrollDots
+/* Easy Scroll Dots 2.0.0 --- https://github.com/Superhands89/EasyScrollDots
 * Quickly add anchor points throughout your web page/application and have navigational dots automatically appear
 * in a fixed position on the side of the page. This allows the user to click to scroll though sections of the page,
 * and it updates as they scroll.
 *
-* By Superhands89 2019-2021 --- https://github.com/Superhands89/
+* By Superhands89 2019-2022 --- https://github.com/Superhands89/
 *
 * GPLv3 Licence for open source use only
 * or purchase a Single Commercial License at https://gum.co/TdtEX
@@ -51,7 +51,7 @@ let dotOffset = 0;
 
 // scroll indicator controller
 function easyScrollDots(dotfixedOptions) {
-    let scrollIndi = document.querySelectorAll('.scroll-indicator');
+    let scrollIndi = document.querySelectorAll('[data-scroll-indicator-title]');
     dotfixedOptions.fixedNav === true ? dotFixedNavPresent = true : dotFixedNavPresent;
     dotfixedOptions.fixedNavId === '' ? dotFixedNavId = false : dotFixedNavId = dotfixedOptions.fixedNavId;
     dotfixedOptions.fixedNavUpward === true ? dotFixedNavUp = true : dotFixedNavUp;
@@ -65,14 +65,18 @@ function easyScrollDots(dotfixedOptions) {
         const scrollIndiElems = Array.prototype.slice.call(scrollIndi);
 
         scrollIndiElems.forEach(function (e, i) {
-            const scrollIndiId = e.getAttribute('id');
             const scrollIndiTitle = e.getAttribute('data-scroll-indicator-title');
             let firstActiveClass = '';
 
             if (i == 0) {
                 firstActiveClass = 'active';
             }
-            scrollIndiController.lastElementChild.insertAdjacentHTML('afterend', '<div class="' + firstActiveClass + '" data-indi-controller-id="' + scrollIndiId + '" onclick="scrollIndiClicked(\'' + scrollIndiId + '\');"><span>' + scrollIndiTitle + '</span><div></div></div>');
+            scrollIndiController.lastElementChild.insertAdjacentHTML('afterend', '<div class="' + firstActiveClass + '" data-indi-controller-id="' + scrollIndiTitle + '" onclick="scrollIndiClicked(\'' + scrollIndiTitle + '\');"><span>' + scrollIndiTitle + '</span><div></div></div>');
+            if (i == scrollIndiElems.length - 1) { // insert additional anchor so that we can always refer to previousElementSibling
+                scrollIndiController.lastElementChild.insertAdjacentHTML('afterend', '<div data-indi-controller-id="indiEnd" style="display: none;"></div>');
+                e.insertAdjacentHTML('afterend', '<div data-scroll-indicator-title="indiEnd"></div>');
+                scrollIndiElems.push(document.querySelector('[data-scroll-indicator-title="indiEnd"]'));
+            }
         });
 
         const scrollIndiControllerDots = scrollIndiController.querySelectorAll('[data-indi-controller-id]');
@@ -81,7 +85,7 @@ function easyScrollDots(dotfixedOptions) {
             let indiScrollTopCollection = {};
 
             scrollIndiElems.forEach(function (e) {
-                const scrollIndiIdScroll = e.getAttribute('id');
+                const scrollIndiIdScroll = e.getAttribute('data-scroll-indicator-title');
                 const indiScrollTop = e.getBoundingClientRect().top;
 
                 indiScrollTopCollection[scrollIndiIdScroll] = indiScrollTop;
@@ -90,108 +94,78 @@ function easyScrollDots(dotfixedOptions) {
             // const indiOffsetValues = Object.values(indiScrollTopCollection); not supported in IE
             const indiOffsetValues = Object.keys(indiScrollTopCollection).map(function (itm) { return indiScrollTopCollection[itm]; });
             const indiOffsetMin = function () {
-                const indiRemoveMinuses = indiOffsetValues.filter(function (x) { return x > -150; });
+
+                const indiRemoveMinuses = indiOffsetValues.filter(function (x) { return x > 0 + (dotOffset + 2); });
 
                 return Math.min.apply(null, indiRemoveMinuses);
-            }; 
+            };
 
             Object.keys(indiScrollTopCollection).forEach(function (e) {
+
                 if (indiScrollTopCollection[e] == indiOffsetMin()) {
+
                     Array.prototype.forEach.call(scrollIndiControllerDots, function (el) {
                         if (el.classList.contains('active')) {
                             el.classList.remove('active');
                         }
                     });
-                    scrollIndiController.querySelector('[data-indi-controller-id="' + e + '"]').classList.add('active');
+
+                    const activeItemCandidate = scrollIndiController.querySelector('[data-indi-controller-id="' + e + '"]');
+                    const activeItemCandidatePrevEl = activeItemCandidate.previousElementSibling;
+                    const activeItem = activeItemCandidatePrevEl.tagName.toLowerCase() !== 'span' ? activeItemCandidatePrevEl : activeItemCandidate;
+
+                    activeItem.classList.add('active');
                 }
             });
 
         }, 300);
 
-      window.addEventListener('scroll', handleIndiScroll);
+        window.addEventListener('scroll', handleIndiScroll);
     }
 };
-    
+
 function scrollIndiClicked(indiId) {
-    if (window.jQuery) {
-        // if jquery is availble then we can use jquery animations
-        const dotDocumentHtml = $('html, body');
-        if (dotFixedNavPresent === true && dotFixedNavId.length) {
-            // there is a fixed nav and its id has been defined
-            const dotNavHeightElem = document.getElementById(dotFixedNavId);
-            const dotNavHeight = dotNavHeightElem.clientHeight;
-            const indiElement = $('#' + indiId);
-    
-            if (dotFixedNavUp === true) {
-                // fix nav on upward scroll only
-                dotDocumentHtml.animate({
-                    scrollTop: indiElement.offset().top - dotOffset
-                }, 700);
-                const scrollPos = document.body.getBoundingClientRect().top;
-                setTimeout(function () {
-                    if (document.body.getBoundingClientRect().top > scrollPos) {
-                        dotDocumentHtml.animate({
-                            scrollTop: indiElement.offset().top - dotNavHeight - dotOffset
-                        }, 400);
-                    }
-                }, 400);
-            }
-            else {
-                // fixed nav scroll
-                dotDocumentHtml.animate({
-                    scrollTop: indiElement.offset().top - dotNavHeight - dotOffset
-                }, 700);
-            }
-        }
-        else {
-            // normal scroll
-            dotDocumentHtml.animate({
-                scrollTop: $('#' + indiId).offset().top - dotOffset
-            }, 700);
-        }    
-    }
-    else {
-        // there is no jquery so we use vanilla scroll animations
-        if (dotFixedNavPresent === true && dotFixedNavId.length) {
-            // there is a fixed nav and its id has been defined
-            const dotNavHeightElem = document.getElementById(dotFixedNavId);
-            const dotNavHeight = dotNavHeightElem.clientHeight;
-            const indiElement = document.getElementById(indiId);
-    
-            if (dotFixedNavUp === true) {
-                // fix nav on upward scroll only
-                window.scrollTo({
-                    top: indiElement.offsetTop - dotOffset,
-                    left: 0,
-                    behavior: 'smooth'
-                });
-                const scrollPos = document.body.getBoundingClientRect().top;
-                setTimeout(function () {
-                    if (document.body.getBoundingClientRect().top > scrollPos) {
-                        window.scrollTo({
-                            top: indiElement.offsetTop - dotNavHeight - dotOffset,
-                            left: 0,
-                            behavior: 'smooth'
-                        });
-                    }
-                }, 400);
-            }
-            else {
-                // fixed nav scroll
-                window.scrollTo({
-                    top: indiElement.offsetTop - dotNavHeight - dotOffset,
-                    left: 0,
-                    behavior: 'smooth'
-                });
-            }
-        }
-        else {
-            // normal scroll
+
+    const indiElement = document.querySelector('[data-scroll-indicator-title="' + indiId + '"]');
+
+    if (dotFixedNavPresent === true && dotFixedNavId.length) {
+        // there is a fixed nav and its id has been defined
+        const dotNavHeightElem = document.getElementById(dotFixedNavId);
+        const dotNavHeight = dotNavHeightElem.clientHeight;
+
+        if (dotFixedNavUp === true) {
+            // fix nav on upward scroll only
             window.scrollTo({
-                top: document.getElementById(indiId).offsetTop - dotOffset,
+                top: indiElement.offsetTop - dotOffset,
+                left: 0,
+                behavior: 'smooth'
+            });
+            const scrollPos = document.body.getBoundingClientRect().top;
+            setTimeout(function () {
+                if (document.body.getBoundingClientRect().top > scrollPos) {
+                    window.scrollTo({
+                        top: indiElement.offsetTop - dotNavHeight - dotOffset,
+                        left: 0,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 400);
+        }
+        else {
+            // fixed nav scroll
+            window.scrollTo({
+                top: indiElement.offsetTop - dotNavHeight - dotOffset,
                 left: 0,
                 behavior: 'smooth'
             });
         }
+    }
+    else {
+        // normal scroll
+        window.scrollTo({
+            top: indiElement.offsetTop - dotOffset,
+            left: 0,
+            behavior: 'smooth'
+        });
     }
 };
