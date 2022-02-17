@@ -39,7 +39,7 @@
         span {
             color: tomato;
             position: absolute;
-            right: ~"calc(100% + 8px)";
+            right: calc(100% + 8px);
             white-space: nowrap;
             top: 50%;
             font-family: arial, sans-serif;
