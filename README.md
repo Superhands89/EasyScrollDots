@@ -10,7 +10,7 @@
   <li><strong>Windows/Mac:</strong> Chrome &#10004; IE 11 &#10004; FF &#10004; Edge &#10004; Opera &#10004;</li>
   <li><strong>Android/IOS:</strong> Chrome &#10004; FF &#10004; Safari &#10004;</li>
 </ul>
-<p><em>Note: Easy Scroll Dots is vanilla and has no dependencies in order to work on latest Edge, Chrome, Firefox and Safari. However, jQuery is recommended if you need consistant and smooth animations on Old Edge.</em></p> 
+<p><em>Note: Easy Scroll Dots is vanilla and has no dependencies in order to work on latest Edge, Chrome, Firefox and Safari.</em></p> 
 
 # Installation
 
@@ -45,17 +45,19 @@ easyScrollDots({
 
 ### Add your anchor points
 
-<p>Add the folliwing HTML snippet at the start of each section of the page that should have a dot associated with it...</p>
+<p>Add the folliwing attribute to each section of the page that should have a dot associated with it...</p>
 
 ```html
-<div>
-    <div class="scroll-indicator" id="section01" data-scroll-indicator-title="Hello World"></div>
-</div>
+data-scroll-indicator-title="Hello World"
 ```
 
-<p><strong>Replace the id with something different each time you add the snippet</strong>, and also update the data-scroll-indicator-title to represent the title for that section of the page.</p>
+<p>e.g.</p>
 
-<p><em>Remember, an id cannot have any spaces and cannot start with a number. Adding a unique id each time is required, and can be useful for creating deep link URLs to your content e.g. mysite.com/#section01</em></p>
+```html
+<div data-scroll-indicator-title="Hello World">Content in my section lorem ipsum dolor...</div>
+```
+
+<p><strong>Update the data-scroll-indicator-title value to represent the title for that section of the page.</p>
 
 ## Options
 
