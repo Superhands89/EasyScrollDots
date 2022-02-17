@@ -7,7 +7,7 @@
 # Browser/OS Support
 
 <ul>
-  <li><strong>Windows/Mac:</strong> Chrome &#10004; IE 11 &#10004; FF &#10004; Edge &#10004; Opera &#10004;</li>
+  <li><strong>Windows/Mac:</strong> Chrome &#10004; FF &#10004; Edge &#10004; IE 11 &#10004; Opera &#10004;</li>
   <li><strong>Android/IOS:</strong> Chrome &#10004; FF &#10004; Safari &#10004;</li>
 </ul>
 <p><em>Note: Easy Scroll Dots is vanilla and has no dependencies in order to work on latest Edge, Chrome, Firefox and Safari.</em></p> 
@@ -30,22 +30,9 @@
 
 ## Usage
 
-### Initialise
-
-<p>Add the following function call somewhere in your javaScript AFTER the easyScrollDots.min.js file has been loaded...</p>
-
-```javascript
-easyScrollDots({
-  'fixedNav': false,
-  'fixedNavId': '',
-  'fixedNavUpward': false,
-  'offset': 0
-});
-```
-
 ### Add your anchor points
 
-<p>Add the folliwing attribute to each section of the page that should have a dot associated with it...</p>
+<p>Add the following attribute to the outer element of each section of the page that should have a dot associated with it...</p>
 
 ```html
 data-scroll-indicator-title="Hello World"
@@ -59,6 +46,19 @@ data-scroll-indicator-title="Hello World"
 
 <p><strong>Update the data-scroll-indicator-title value to represent the title for that section of the page.</p>
 
+### Initialise
+
+<p>Add the following function call somewhere in your javaScript AFTER the easyScrollDots.min.js file has been loaded...</p>
+
+```javascript
+easyScrollDots({
+  'fixedNav': false,
+  'fixedNavId': '',
+  'fixedNavUpward': false,
+  'offset': 0
+});
+```
+  
 ## Options
 
 <p>Some sites have a fixed or sticky top navigation bar which gets in the way when easyScrollDots scrolls the browser window to the top of each section. Therefore you have to tell easyScrollDots if you have a <strong>fixed nav</strong>, and if so, you also need to provide the <strong>id of the navigation bar</strong>. You can also tell easyScrollDots if your fixed <strong>nav only appears when the user is scrolling upward</strong>. Finally, you can set an <strong>offset amount</strong> in order to adjust where the browser scrolls to when a dot is clicked.</p>
