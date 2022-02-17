@@ -84,8 +84,6 @@ It is assumed that your application has a body tag. (easyScrollDots appends itse
 
 <strong><a href="https://easyscrolldots.primmis.com/" target="_blank">DEMO</a></strong>
 
-<p><em>The demo is using jQuery for Old Edge support, but jQuery is NOT required.</em></p>
-
 # Commercial License
 
 <p>To use easyScrollDots on commercial projects, a commercial license is required...</p>
