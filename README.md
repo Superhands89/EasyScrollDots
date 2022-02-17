@@ -7,8 +7,8 @@
 # Browser/OS Support
 
 <ul>
-  <li><strong>Windows/Mac:</strong> Chrome &#10004; FF &#10004; Edge &#10004; IE 11 &#10004; Opera &#10004;</li>
-  <li><strong>Android/IOS:</strong> Chrome &#10004; FF &#10004; Safari &#10004;</li>
+  <li><strong>Windows/Mac: </strong> Chrome &#10004; FF &#10004; Edge &#10004; IE 11 &#10004; Opera &#10004;</li>
+  <li><strong>Android/IOS: </strong> Chrome &#10004; FF &#10004; Safari &#10004;</li>
 </ul>
 <p><em>Note: Easy Scroll Dots is vanilla and has no dependencies in order to work on latest Edge, Chrome, Firefox and Safari.</em></p> 
 
@@ -32,7 +32,7 @@
 
 ### Add your anchor points
 
-<p>Add the following attribute to the outer element of each section of the page that should have a dot associated with it...</p>
+<p>Add the following attribute to the outer element of each section that should have a dot associated with it...</p>
 
 ```html
 data-scroll-indicator-title="Hello World"
