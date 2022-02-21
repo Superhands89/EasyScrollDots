@@ -1,4 +1,4 @@
-/* Easy Scroll Dots 2.0.1 --- https://github.com/Superhands89/EasyScrollDots
+/* Easy Scroll Dots 2.0.2 --- https://github.com/Superhands89/EasyScrollDots
 * Quickly add anchor points throughout your web page/application and have navigational dots automatically appear
 * in a fixed position on the side of the page. This allows the user to click to scroll though sections of the page,
 * and it updates as they scroll.
@@ -43,11 +43,12 @@ function dotsThrottle(func, wait, options) {
     };
 };
 
-// global fixed nav options
+// global fixed nav and offset options
 let dotFixedNavPresent = false;
 let dotFixedNavId = '';
 let dotFixedNavUp = false;
 let dotOffset = 0;
+let dotNavHeight = 0;
 
 // scroll indicator controller
 function easyScrollDots(dotfixedOptions) {
@@ -56,6 +57,17 @@ function easyScrollDots(dotfixedOptions) {
     dotfixedOptions.fixedNavId === '' ? dotFixedNavId = false : dotFixedNavId = dotfixedOptions.fixedNavId;
     dotfixedOptions.fixedNavUpward === true ? dotFixedNavUp = true : dotFixedNavUp;
     dotfixedOptions.offset > 0 ? dotOffset = dotfixedOptions.offset : dotOffset;
+
+	if (dotFixedNavPresent === true && dotFixedNavId.length) {
+        // there is a fixed nav and its id has been defined
+        const dotNavHeightElem = document.getElementById(dotFixedNavId);
+		if (dotNavHeightElem !== null) {
+			dotNavHeight = dotNavHeightElem.clientHeight;
+		}
+		else {
+			console.error('easyScrollDots Error: A fixed navigation ID has been defined, but an element with the corresponding ID cannot be found in the DOM. Check you have spelled the dotFixedNavId correctly.')
+		}
+	}
 
     if (scrollIndi.length) {
         const scrollIndiTemplate = '<div class="scroll-indicator-controller"><span></span></div>';
@@ -93,9 +105,9 @@ function easyScrollDots(dotfixedOptions) {
 
             // const indiOffsetValues = Object.values(indiScrollTopCollection); not supported in IE
             const indiOffsetValues = Object.keys(indiScrollTopCollection).map(function (itm) { return indiScrollTopCollection[itm]; });
+			
             const indiOffsetMin = function () {
-
-                const indiRemoveMinuses = indiOffsetValues.filter(function (x) { return x > 0 + (dotOffset + 2); });
+                const indiRemoveMinuses = indiOffsetValues.filter(function (x) { return x > 0 + (dotOffset + 2) + dotNavHeight; });
 
                 return Math.min.apply(null, indiRemoveMinuses);
             };
@@ -128,10 +140,7 @@ function scrollIndiClicked(indiId) {
 
     const indiElement = document.querySelector('[data-scroll-indicator-title="' + indiId + '"]');
 
-    if (dotFixedNavPresent === true && dotFixedNavId.length) {
-        // there is a fixed nav and its id has been defined
-        const dotNavHeightElem = document.getElementById(dotFixedNavId);
-        const dotNavHeight = dotNavHeightElem.clientHeight;
+    if (dotNavHeight !== 0) {
 
         if (dotFixedNavUp === true) {
             // fix nav on upward scroll only
