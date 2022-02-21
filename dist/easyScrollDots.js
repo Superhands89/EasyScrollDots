@@ -58,16 +58,16 @@ function easyScrollDots(dotfixedOptions) {
     dotfixedOptions.fixedNavUpward === true ? dotFixedNavUp = true : dotFixedNavUp;
     dotfixedOptions.offset > 0 ? dotOffset = dotfixedOptions.offset : dotOffset;
 
-	if (dotFixedNavPresent === true && dotFixedNavId.length) {
-        // there is a fixed nav and its id has been defined
-        const dotNavHeightElem = document.getElementById(dotFixedNavId);
-		if (dotNavHeightElem !== null) {
-			dotNavHeight = dotNavHeightElem.clientHeight;
-		}
-		else {
-			console.error('easyScrollDots Error: A fixed navigation ID has been defined, but an element with the corresponding ID cannot be found in the DOM. Check you have spelled the dotFixedNavId correctly.')
-		}
-	}
+    if (dotFixedNavPresent === true && dotFixedNavId.length) {
+    // there is a fixed nav and its id has been defined
+    const dotNavHeightElem = document.getElementById(dotFixedNavId);
+        if (dotNavHeightElem !== null) {
+	    dotNavHeight = dotNavHeightElem.clientHeight;
+        }
+        else {
+	    console.error('easyScrollDots Error: A fixed navigation ID has been defined, but an element with the corresponding ID cannot be found in the DOM. Check you have spelled the dotFixedNavId correctly.')
+        }
+    }
 
     if (scrollIndi.length) {
         const scrollIndiTemplate = '<div class="scroll-indicator-controller"><span></span></div>';
