@@ -138,6 +138,7 @@ function easyScrollDots(dotfixedOptions) {
 
 function scrollIndiClicked(indiId) {
 
+    const cachePageYOffset = window.pageYOffset;
     const indiElement = document.querySelector('[data-scroll-indicator-title="' + indiId + '"]');
 
     if (dotNavHeight !== 0) {
@@ -145,7 +146,7 @@ function scrollIndiClicked(indiId) {
         if (dotFixedNavUp === true) {
             // fix nav on upward scroll only
             window.scrollTo({
-                top: indiElement.offsetTop - dotOffset,
+	    	top: (cachePageYOffset + indiElement.getBoundingClientRect().top) - dotOffset,
                 left: 0,
                 behavior: 'smooth'
             });
@@ -153,7 +154,7 @@ function scrollIndiClicked(indiId) {
             setTimeout(function () {
                 if (document.body.getBoundingClientRect().top > scrollPos) {
                     window.scrollTo({
-                        top: indiElement.offsetTop - dotNavHeight - dotOffset,
+		    	top: (cachePageYOffset + indiElement.getBoundingClientRect().top) - dotNavHeight - dotOffset,
                         left: 0,
                         behavior: 'smooth'
                     });
@@ -163,7 +164,7 @@ function scrollIndiClicked(indiId) {
         else {
             // fixed nav scroll
             window.scrollTo({
-                top: indiElement.offsetTop - dotNavHeight - dotOffset,
+	    	top: (cachePageYOffset + indiElement.getBoundingClientRect().top) - dotNavHeight - dotOffset,
                 left: 0,
                 behavior: 'smooth'
             });
@@ -172,7 +173,7 @@ function scrollIndiClicked(indiId) {
     else {
         // normal scroll
         window.scrollTo({
-            top: indiElement.offsetTop - dotOffset,
+	    top: (cachePageYOffset + indiElement.getBoundingClientRect().top) - dotOffset,
             left: 0,
             behavior: 'smooth'
         });
