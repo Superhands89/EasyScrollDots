@@ -82,7 +82,8 @@ It is assumed that your application has a body tag. (easyScrollDots appends itse
 
 <p>See a working demo:</p>
 
-<strong><a href="https://easyscrolldots.primmis.com/" target="_blank">DEMO</a></strong>
+<del><a href="https://easyscrolldots.primmis.com/" target="_blank">DEMO</a></del>
+<strong>^ Now only available on the <a href="https://web.archive.org/">Wayback Machine</a></strong>
 
 # Commercial License
 
